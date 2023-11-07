@@ -429,6 +429,7 @@ body {
     margin: 0.4rem;
     width: 306px;
     margin-left: 0.7rem;
+    margin-top: -1rem;
   }
 
   .box form .inputBox {
