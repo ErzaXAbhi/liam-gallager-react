@@ -1,38 +1,422 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+:root {
+  --primary: #fefefa;
+  --secondary: #b2beb5;
+  --dark: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--dark);
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.navbar .logo h1 {
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.navbar .menu ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar .menu ul li {
+  padding: 1rem;
+}
+
+.navbar .menu ul li a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* hero */
+
+.hero {
+  background: url(./components/images/demo2-min.jpg) center no-repeat;
+  background-size: cover;
+  height: 80dvh;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-heading {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 400;
+  align-items: flex-end;
+}
+
+.hero h1 span {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--secondary);
+}
+
+.hero-para {
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero p {
+  padding: 6rem;
+  font-size: 1.3rem;
+  line-height: 1;
+  font-weight: 300;
+  color: var(--secondary);
+  text-transform: capitalize;
+}
+
+/* potraits */
+
+.potraits {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  padding: 1rem;
+  margin-top: -2rem;
+}
+
+.potraits img {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+/* Envoirnment */
+
+.envo {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 1rem;
+  margin-top: -2rem;
+}
+
+.envo img {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+/* Contact */
+
+.contact {
+  background: url(./components/images/environment9-min.jpg) center no-repeat;
+  background-size: cover;
+  height: 110dvh;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3rem;
+}
+
+.contact-heading h1 {
+  color: var(--primary);
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.contact-heading p {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* contact form */
+
+.box {
+  position: relative;
+  width: 333px;
+  height: 390px;
+  background: var(--dark);
+  border-radius: 0.5rem;
+  margin: 3rem;
+  margin-top: -1rem;
+  /* padding: 0.2rem; */
+  overflow: hidden;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ffba00,
+    #ffba00,
+    #ffba00
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -1.5s;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ffba00,
+    #ffba00,
+    #ffba00
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box form {
+  position: absolute;
+  background: #222;
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.borderLine {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+
+.borderLine::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ff0800,
+    #ff0800,
+    #ff0800
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 3s linear infinite;
+  animation-delay: -1.5s;
+}
+
+.borderLine::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ff0800,
+    #ff0800,
+    #ff0800
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 3s linear infinite;
+  animation-delay: -3s;
+}
+
+.box form h2 {
+  color: var(--primary);
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.box form .inputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 2.5rem;
+}
+
+.box form .inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  color: var(--dark);
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+  border: none;
+}
+
+.box form .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  color: var(--secondary);
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span {
+  color: var(--primary);
+  font-size: 0.75em;
+  transform: translateY(-34px);
+}
+
+.box form .inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 4px;
+  overflow: hidden;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i {
+  height: 45px;
+}
+
+.box form input[type="submit"] {
+  border: none;
+  outline: none;
+  padding: 9px 25px;
+  background: var(--primary);
+  margin-top: 2rem;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 100px;
+  text-transform: uppercase;
+}
+
+.box form input[type="submit"]:active {
+  opacity: 0.8;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .hero h1 {
+    font-size: 2rem;
+    padding-top: 8rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero p {
+    margin-top: 5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  .potraits {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 1rem;
+    margin-top: -2rem;
+  }
+
+  .potraits img {
+    padding: 0.5rem;
+  }
+
+  .envo {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 1rem;
+    margin-top: -2rem;
+  }
+
+  .contact-heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-heading p {
+    font-size: 1rem;
+  }
+
+  .contact {
+    height: 100dvh;
+  }
+
+  .box {
+    margin: 0.4rem;
   }
 }
