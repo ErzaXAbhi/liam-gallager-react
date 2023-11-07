@@ -421,6 +421,10 @@ body {
     height: 100dvh;
   }
 
+  .contact-heading {
+    padding: 2rem;
+  }
+
   .box {
     margin: 0.4rem;
     width: 306px;
