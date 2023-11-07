@@ -423,5 +423,10 @@ body {
 
   .box {
     margin: 0.4rem;
+    width: 306px;
+  }
+
+  .box form .inputBox {
+    width: 270px;
   }
 }
