@@ -78,8 +78,8 @@ body {
 }
 
 .hero h1 span {
-  font-size: 1.1rem;
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: 500;
   color: var(--secondary);
 }
 
@@ -92,7 +92,7 @@ body {
   padding: 6rem;
   font-size: 1.3rem;
   line-height: 1;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--secondary);
   text-transform: capitalize;
 }
